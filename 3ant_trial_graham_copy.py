@@ -169,10 +169,10 @@ class vnaStuff():
             #Treat the time location of each max as radii of semicircles. Draw the semicircles and split to be in location of both receivers.
             #Plot these.
             #first find the range using the time bump on the center antenna (times3)
-            self.range_calc = (light*range3)/2
+            self.range_calc = (light*range3)/4 -2.97
             #find the range from each side receiver
-            range1_calc = light*range1 - self.range_calc
-            range2_calc = light*range2 - self.range_calc
+            range1_calc = light*range1 - self.range_calc - 3.15
+            range2_calc = light*range2 - self.range_calc - 3.15
             #calculate maximum/minimum x distance for each antenna
             minLeft = posLeft - range1_calc
             maxLeft = posLeft + range1_calc
